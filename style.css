@@ -1,0 +1,121 @@
+/* UNIVERSAL RESET */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* STYLES */
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  margin: auto;
+  background-color: black;
+}
+
+header > div {
+  max-width: 40rem;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+header > div > img {
+  filter: invert();
+}
+
+nav {
+  margin: 2rem auto 0;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  max-width: 50rem;
+  margin: auto;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "banner banner banner"
+                       "article-1 article-2 article-3";
+  row-gap: 4rem;
+  column-gap: 2rem;    
+  max-width: 60rem;
+  margin: 2rem auto;                 
+}
+
+main > article:first-child {
+  grid-area: banner;
+  max-width: 50rem;
+  margin: auto;
+}
+
+main > article:not(:first-child) > h2{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: black;
+}
+
+footer > div {
+  max-width: 60rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  color: white;
+  padding: 2rem 0;
+}
+
+footer img {
+  width: 8rem;
+}
+
+footer span {
+  justify-self: end;
+}
+
+
+
+
+
